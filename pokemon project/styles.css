@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #2874f0;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.search-container {
+    margin-top: 10px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    flex: 1;
+}
+
+.pokemon-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    padding: 10px;
+}
+
+.pokemon-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.pokemon-item .btn-add-to-cart {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2874f0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 0.875rem;
+}
+
+.pokemon-item .btn-add-to-cart:hover {
+    background-color: #1a5bb8;
+}
+
+.pokemon-item .btn-add-to-cart:focus {
+    outline: 2px solid #fff;
+}
+
+.details-container {
+    max-width: 400px;
+    margin-left: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#details img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+#details h3 {
+    margin: 10px 0;
+}
+
+aside {
+    width: 250px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+}
+
+aside h2 {
+    margin-top: 0;
+}
+
+#cart-items {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cart-items li {
+    margin-bottom: 10px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .details-container {
+        margin: 20px 0;
+    }
+
+    aside {
+        width: 100%;
+        position: static;
+        margin-top: 20px;
+    }
+}
